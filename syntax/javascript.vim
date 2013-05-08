@@ -28,8 +28,8 @@ syn keyword NodeKeyword  exports __dirname
 
 " ----------
 " Jasmine
-syn keyword JasmineSpecial  afterEach beforeEach describe it expect spyOn runs waits waitsFor
-syn keyword JasmineKeyword  jasmine
+syn match JasmineSpecial  "\.\(toEqual\|toMatch\)"
+syn keyword JasmineKeyword  jasmine describe it afterEach beforeEach expect spyOn runs waits waitsFor
 
 " ----------
 " Debug
