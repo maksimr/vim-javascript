@@ -32,6 +32,11 @@ syn match JasmineSpecial  "\.\(toEqual\|toMatch\)"
 syn keyword JasmineKeyword  jasmine describe it afterEach beforeEach expect spyOn runs waits waitsFor
 
 " ----------
+" Angualar
+syn match AngularSpecial  "\.\(service\|factory\|value\)"
+syn keyword AngularKeyword  angular
+
+" ----------
 " Debug
 syn keyword Debug console print
 
@@ -47,6 +52,9 @@ HiLink jQuerySpecial Special
 HiLink jQueryKeyword Keyword
 
 HiLink NodeKeyword Keyword
+
+HiLink AngularSpecial Special
+HiLink AngularKeyword Keyword
 
 HiLink JasmineSpecial Special
 HiLink JasmineKeyword Keyword
