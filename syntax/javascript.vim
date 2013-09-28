@@ -40,7 +40,23 @@ syn keyword AngularKeyword  angular
 " Debug
 syn keyword Debug console print
 
+" ----------
+" JSDoc / JSDoc Toolkit
+syntax match  jsDocTags         containedin=javaScriptComment "@\(alias\|augments\|borrows\|class\|constructs\|default\|defaultvalue\|emits\|exception\|exports\|extends\|file\|fires\|kind\|listens\|member\|memberOf\|mixes\|module\|name\|namespace\|requires\|throws\|var\|variation\|version\)\>" nextgroup=jsDocParam skipwhite
+syntax match  jsDocTags         containedin=javaScriptComment "@\(arg\|argument\|param\|property\)\>" nextgroup=jsDocType skipwhite
+syntax match  jsDocTags         containedin=javaScriptComment "@\(callback\|enum\|external\|this\|type\|typedef\|return\|returns\)\>" nextgroup=jsDocTypeNoParam skipwhite
+syntax match  jsDocTags         containedin=javaScriptComment "@\(lends\|see\)\>" nextgroup=jsDocSeeTag skipwhite
+syntax match  jsDocTags         containedin=javaScriptComment "@\(abstract\|access\|author\|classdesc\|constant\|const\|constructor\|copyright\|deprecated\|desc\|description\|event\|example\|fileOverview\|function\|global\|ignore\|inner\|instance\|license\|method\|mixin\|overview\|private\|protected\|public\|readonly\|since\|static\|todo\|summary\|undocumented\|virtual\)\>"
+syntax region jsDocType         start="{" end="}" oneline contained nextgroup=jsDocParam skipwhite
+syntax match  jsDocType         "\%(#\|\"\|\w\|\.\|:\|\/\)\+" nextgroup=jsDocParam skipwhite contained
+syntax region jsDocTypeNoParam  start="{" end="}" oneline contained
+syntax match  jsDocTypeNoParam  "\%(#\|\"\|\w\|\.\|:\|\/\)\+" contained
+syntax match  jsDocParam        "\%(#\|\"\|{\|}\|\w\|\.\|:\|\/\)\+" contained
+syntax region jsDocSeeTag       matchgroup=jsDocSeeTag start="{" end="}" contains=jsDocTags contained
+
 command! -nargs=+ HiLink hi def link <args>
+hi DocParam cterm=bold
+
 HiLink CommonSpecial Special
 HiLink CommonKeyword Keyword
 HiLink CommonProperty ModeMsg
@@ -58,4 +74,10 @@ HiLink AngularKeyword Keyword
 
 HiLink JasmineSpecial Special
 HiLink JasmineKeyword Keyword
+
+HiLink jsDocTags Special
+HiLink jsDocSeeTag Function
+HiLink jsDocType Comment
+HiLink jsDocTypeNoParam Comment
+HiLink jsDocParam Comment
 delcommand HiLink
