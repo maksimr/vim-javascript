@@ -9,7 +9,7 @@ syn keyword CommonSpecial  has add remove set get toggle replace
 syn keyword CommonSpecial  addClass removeClass bind
 syn keyword CommonSpecial  cache
 
-syn keyword CommonKeyword  require
+syn keyword CommonKeyword  require that
 syn match CommonProperty  '^\s\+[$_A-Za-z]\+[_A-Za-z0-9]*:'
 
 " ----------
