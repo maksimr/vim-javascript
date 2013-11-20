@@ -1,6 +1,6 @@
 snippet des
 	describe('${1:Description}', function () {
-		${2}
+		${0}
 	});
 snippet it
 	it('${1:should}', function () {
@@ -8,35 +8,35 @@ snippet it
 	});
 snippet be
 	beforeEach(function() {
-		${1}
+		${0}
 	});
 snippet ae
 	afterEach(function() {
-		${1}
+		${0}
 	});
 snippet !ee
-	expect($1).toEqual({$2});
+	expect($1).toEqual({$0});
 snippet !em
-	expect($1).toMatch(${2});
+	expect($1).toMatch(${0});
 snippet x:d
 	describe('${1:Description}', function () {
-		${2}
+		${0}
 	});
 snippet x:it
 	it('${1:should}', function () {
-		${2}
+		${0}
 	});
 snippet x:be
 	beforeEach(function() {
-		${1}
+		${0}
 	});
 snippet x:ae
 	afterEach(function() {
-		${1}
+		${0}
 	});
 snippet !bee
-	expect($1).to.be.equal(${2});
+	expect($1).to.be.equal(${0});
 snippet !bem
-	expect($1).to.match(${2});
+	expect($1).to.match(${0});
 snippet !bemp
-	expect(${1}).to.be.empty();
+	expect(${0}).to.be.empty();
