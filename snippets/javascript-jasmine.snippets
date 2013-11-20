@@ -15,9 +15,9 @@ snippet ae
 		${0}
 	});
 snippet !ee
-	expect($1).toEqual({$0});
+	expect(${1}).toEqual({$0});
 snippet !em
-	expect($1).toMatch(${0});
+	expect(${1}).toMatch(${0});
 snippet x:d
 	describe('${1:`Filename()`}', function () {
 		${0}
@@ -35,8 +35,8 @@ snippet x:ae
 		${0}
 	});
 snippet !bee
-	expect($1).to.be.equal(${0});
+	expect(${1}).to.be.equal(${0});
 snippet !bem
-	expect($1).to.match(${0});
+	expect(${1}).to.match(${0});
 snippet !bemp
 	expect(${0}).to.be.empty();
