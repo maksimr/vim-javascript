@@ -2,6 +2,10 @@ snippet des
 	describe('${1:`Filename()`}', function () {
 		${0}
 	});
+snippet d
+	describe('${1:`Filename()`}', function () {
+		${0}
+	});
 snippet it
 	it('${1:should}', function () {
 		${0}
@@ -40,3 +44,7 @@ snippet !bem
 	expect(${1}).to.match(${0});
 snippet !bemp
 	expect(${0}).to.be.empty();
+snippet sinon.st
+	sinon.stub(${1}, '${2}')${0:;}
+snippet snion.sp
+	sinon.spy(${1}, '${2}')${0:;}
