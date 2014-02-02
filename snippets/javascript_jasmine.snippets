@@ -44,7 +44,16 @@ snippet !bem
 	expect(${1}).to.match(${0});
 snippet !bemp
 	expect(${0}).to.be.empty();
-snippet sinon.st
-	sinon.stub(${1}, '${2}')${0:;}
-snippet snion.sp
-	sinon.spy(${1}, '${2}')${0:;}
+# Sinon
+snippet x:s
+	${1}sinon.stub(${2}, '${3}')${0:;}
+snippet x:sp
+	${1}sinon.spy(${2}, '${3}')${0:;}
+snippet rs
+	returns({1});
+snippet !cw
+	expect(${1}).to.be.calledWith({0});
+snippet !c
+	expect(${0}).to.be.called();
+snippet !
+	expect(${0}).to.be.called();

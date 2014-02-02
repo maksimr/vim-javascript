@@ -7,9 +7,9 @@ snippet f;
 		${0}
 	};
 snippet (f
-	(function(${2}) {
+	(function() {
 		${0}
-	}(${1})
+	}()
 snippet f,
 	function(${1}) {
 		${0}
@@ -22,5 +22,7 @@ snippet :f,
 	${1}: function(${2}) {
 		${0}
 	},
+snippet cl
+	console.log(${0});
 snippet cll
 	console.log(${1:'maksimrv: `Filename()`}', ${0});
