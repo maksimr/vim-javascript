@@ -7,7 +7,7 @@ snippet d
 		${0}
 	});
 snippet it
-	it('${1:should}', function() {
+	it('should ${1}', function() {
 		${0}
 	});
 snippet be
@@ -27,7 +27,7 @@ snippet x:d
 		${0}
 	});
 snippet x:it
-	it('${1:should}', function() {
+	it('should ${1}', function() {
 		${0}
 	});
 snippet x:be
@@ -56,4 +56,4 @@ snippet !cw
 snippet !c
 	expect(${0}).to.be.called();
 snippet !
-	expect(${0}).to.be.called();
+	expect(${1}).to.be${0};
