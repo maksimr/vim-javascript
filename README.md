@@ -1,8 +1,3 @@
-Extend default vim syntax highlighting for JavaScript files.
+# vim-javascript
 
-  - jQuery
-  - Dojo
-  - Node
-  - Jasmine
-
-Maksim Ryzhikov
+Syntax highlighting for JavaScript
