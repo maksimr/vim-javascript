@@ -4,22 +4,6 @@
 " Extend built in vim javascript syntax highlighting
 "
 
-syn include @XMLSyntax syntax/xml.vim
-syn region xmlString contained start=+{+ end=++ contains=jsBlock,javascriptBlock
-syn region xmlString contained start=+//+ end=++ contains=jsComment
-syn region jsxChild contained start=+{+ end=++ contains=jsBlock,javascriptBlock
-  \ extend
-syn region jsxRegion
-  \ contains=@Spell,@XMLSyntax,jsxRegion,jsxChild,jsBlock,javascriptBlock
-  \ start=+\%(<\|\w\)\@<!<\z([a-zA-Z_][a-zA-Z0-9:\-.]*\>[:,]\@!\)\([^>]*>(\)\@!+
-  \ skip=+<!--\_.\{-}-->+
-  \ end=+</\z1\_\s\{-}>+
-  \ end=+/>+
-  \ keepend
-  \ extend
-syn cluster jsExpression add=jsxRegion
-syn cluster javascriptNoReserved add=jsxRegion
-
 " ----------
 " Common
 syn keyword CommonSpecial  has add remove set get toggle replace
